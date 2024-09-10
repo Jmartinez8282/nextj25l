@@ -34,3 +34,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Notes
+
+### Used Commands
+    npx created-next-app@latest => To create our Next.JS app
+
+    npm run dev => To run our Next.JS app
+
+## File Structure
+    page.tsx => component file for a page
+        They represent the structure of a single page
+
+#### Routing
+    Next.JS will create routes to our page.tsx files based on our file structure
+        If you want to group files together inside a parent folder, but don't want that 
+        parent folder to show up in the route, you can surround that folder name in 
+        parentheses 
+        Example: (pages)
+#####

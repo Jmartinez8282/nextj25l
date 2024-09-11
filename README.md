@@ -43,9 +43,18 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
     npm run dev => To run our Next.JS app
 
+    npm install @nextui-org/react framer-motion => To install nextui and framer motion
+
 ## File Structure
     page.tsx => component file for a page
         They represent the structure of a single page
+
+        Similar to the App.tsx
+
+    layout.tsx => a layout for a group of pages
+        They can represent an overall structure of multiple pages, such as a nav or side bar
+
+        The root layout.tsx would be similar to t he react index.html
 
 #### Routing
     Next.JS will create routes to our page.tsx files based on our file structure
@@ -53,4 +62,24 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
         parent folder to show up in the route, you can surround that folder name in 
         parentheses 
         Example: (pages)
-#####
+##### Rendering
+
+    Server side Redering (SSR) => When you code is rendered on the server and the server sedn back a fully rendered static webpage
+
+        -SSR cannot render anything that requires user interaction or the browswer, such as buttons, inputs or hooks, but they can have children that are client components to handle those
+
+        -SSR is faster that rendering everything on the client
+
+        -By default all component and pages are server components
+
+        to make a component client side => "use client"
+
+        Server componnets can have both server and client children
+
+    Client side rendering (CSR) => When your code is sent and rendered on the client's system
+        -This can be slower than SSR
+
+        -Client components cannot have server components. Whenever you call a compoenent
+        inside of a client component it will become a client component, because, like their parent, it will be rendered on the client.
+
+        Client components can only have client children
